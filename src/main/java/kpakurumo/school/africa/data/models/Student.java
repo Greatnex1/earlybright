@@ -15,11 +15,16 @@ import java.util.Collection;
 @Setter
 @Getter
 @Builder
-//@ToString
 public class Student extends  EarlyBrightAppUser{
     @Id
     @GeneratedValue(strategy =  GenerationType.SEQUENCE)
     private Long id;
+    private String firstName;
+    private  String lastName;
+    private  String email;
+    private String phoneNumber;
+    private String password;
+  //  private String address;
     @OneToMany(fetch = FetchType.EAGER)
     private Collection<Course> courses = new ArrayList<>();
 
