@@ -23,6 +23,7 @@ public class Student extends  EarlyBrightAppUser{
     private  String lastName;
     private  String email;
     private String phoneNumber;
+    private String username;
     private String password;
   //  private String address;
     @OneToMany(fetch = FetchType.EAGER)
