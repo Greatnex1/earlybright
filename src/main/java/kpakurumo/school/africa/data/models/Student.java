@@ -15,7 +15,7 @@ import java.util.Collection;
 @Setter
 @Getter
 @Builder
-public class Student extends  EarlyBrightAppUser{
+public class Student extends EarlyBrightAppUser{
     @Id
     @GeneratedValue(strategy =  GenerationType.SEQUENCE)
     private Long id;
