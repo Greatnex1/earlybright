@@ -17,7 +17,7 @@ public interface UserService {
    Student saveStudent (Student student);
 
    Admin saveAdmin(Admin admin);
-//    List<EarlyBrightAppUser> getUsers();
+   List<EarlyBrightAppUser> getUsers();
 
     //void addStudentToUser(String username, String roleName);
     EarlyBrightAppUser getUserByEmail (String email);
