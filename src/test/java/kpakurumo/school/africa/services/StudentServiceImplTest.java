@@ -24,10 +24,10 @@ class StudentServiceImplTest {
         request = StudentRegistrationRequest
                 .builder()
                 .email("adams@email.com")
-                .firstName("Adams")
+                .firstName("Adam")
                 .lastName("williams")
                 .phoneNumber("6754321")
-
+                .username("adams")
                 .build();
         registerResponse = studentService.register(request);
 
