@@ -3,13 +3,13 @@ package kpakurumo.school.africa.data.models;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 
 @Entity
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-//@ToString
 public class Admin extends EarlyBrightAppUser {
     @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE )
