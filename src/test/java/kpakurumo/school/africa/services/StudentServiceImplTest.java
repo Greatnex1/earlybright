@@ -2,6 +2,7 @@ package kpakurumo.school.africa.services;
 
 import kpakurumo.school.africa.data.dto.request.StudentRegistrationRequest;
 import kpakurumo.school.africa.data.dto.respond.StudentRegistrationResponse;
+import kpakurumo.school.africa.repository.StudentRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,6 +16,9 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 class StudentServiceImplTest {
     @Autowired
     private  StudentService studentService ;
+
+    @Autowired
+    StudentRepository studentRepository;
 
     private StudentRegistrationRequest request;
 
@@ -40,14 +44,16 @@ class StudentServiceImplTest {
     @Test
     void  getAllStudent(){
         assertThat(studentService.getAllStudents()).isNotNull()  ;
-    log.info(" students in db ::{} ", studentService.getAllStudents());
+    log.info(" students in db ::{} ", studentService.getAllStudents().size());
     }
     @Test
     void deleteStudent(){
+     //   studentService.register(request);
         assertThat(request).isNotNull();
+        log.info("id->{}",request.getId());
 
-        studentService.expelStudent(1L);
+        studentService.expelStudent(2L);
         assertThat(studentService.getAllStudents().isEmpty());
-        log.info(" student in db ::{} ", studentService.getAllStudents());
+        log.info(" student in db ::{} ", studentService.getAllStudents().size());
     }
 }
