@@ -1,13 +1,9 @@
 package kpakurumo.school.africa.data.models;
 
 import lombok.*;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.cglib.core.GeneratorStrategy;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
-
 
 @Entity
 @NoArgsConstructor
@@ -26,7 +22,7 @@ public class Student extends EarlyBrightAppUser{
     private String username;
     private String password;
   //  private Permission permission;
-  //  private String address;
+    private String address;
     @OneToMany(fetch = FetchType.EAGER)
     private Collection<Course> courses = new ArrayList<>();
 
